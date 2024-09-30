@@ -12,7 +12,8 @@ wiki_tool = WikipediaQueryRun(api_wrapper=api_wrapper)
 # Wikipedia Search Tool
 tools = [wiki_tool]
 
-GROQ_API_KEY = "Your GROQ API KEY"
+# Your GROQ API KEY
+GROQ_API_KEY = os.environ["GROQ_API_KEY"]
 llm = ChatGroq(
     model="mixtral-8x7b-32768",
     temperature=0,
